@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Test Form</title>
+    <link rel="stylesheet" href="lab-test-styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-content">
+            <form id="labTestForm">
+                <h2>1. Your Contact Details</h2>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="patientId">Patient Id if exists</label>
+                <input type="text" id="patientId" name="patientId">
+                
+                <label for="contactNumber">Contact Number</label>
+                <input type="text" id="contactNumber" name="contactNumber" required>
+                
+                <label for="emailId">Email id</label>
+                <input type="email" id="emailId" name="emailId" required>
+
+                <h2>2. Address</h2>
+                <label for="houseNumber">H-No</label>
+                <input type="text" id="houseNumber" name="houseNumber" required>
+                
+                <label for="street">Street</label>
+                <input type="text" id="street" name="street" required>
+                
+                <label for="area">Area</label>
+                <input type="text" id="area" name="area" required>
+                
+                <label for="district">District</label>
+                <select id="district" name="district" required>
+                    <option value="">Choose</option>
+                    <option value="District1">District1</option>
+                    <option value="District2">District2</option>
+                </select>
+
+                <h2>3. Choose the Test Type</h2>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="cbc" name="testType" value="CBC" required>
+                    <label for="cbc">CBC</label><br>
+                    <input type="checkbox" id="urine" name="testType" value="Complete Urine">
+                    <label for="urine">Complete Urine</label><br>
+                    <input type="checkbox" id="lipid" name="testType" value="Lipid Profile">
+                    <label for="lipid">Lipid Profile</label><br>
+                    <input type="checkbox" id="tsh" name="testType" value="TSH">
+                    <label for="tsh">TSH</label><br>
+                    <input type="checkbox" id="glucose" name="testType" value="Glucose Test">
+                    <label for="glucose">Glucose Test</label>
+                </div>
+                <p id="testTypeError" class="error">Check at least one box without fail</p>
+
+                <h2>4. Do you want a hard copy of the report also?</h2>
+				<div class="checkbox-container">
+					<input type="radio" id="hardCopyYes" name="hardCopy" value="Yes" required>
+					<label for="hardCopyYes">Yes</label>
+					<input type="radio" id="hardCopyNo" name="hardCopy" value="No">
+					<label for="hardCopyNo">No</label>
+				</div>
+
+                <h2>5. Select Your Comfortable Date and Time</h2>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" required>
+
+                <div class="form-actions">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-image-container">
+            <img src="Images/Lab-Test/lab-test.jpg" alt="Lab Test Image" class="form-image">
+        </div>
+    </div>
+
+    <script src="lab-test-script.js"></script>
+</body>
+</html>

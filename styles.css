@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4f4f4f;
+    color: white;
+    padding: 3px 0;
+    text-align: center;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+.slideshow-container {
+    width: 100%;
+    max-width: calc(100vw - 10px);
+    height: calc(100vh - 130px);
+    overflow: hidden;
+    border: 2px solid steelblue;
+    margin: 130px auto 0 auto;
+}
+
+.slideshow {
+    display: flex;
+    width: 100%; 
+    animation: slide 25s infinite;
+    height: 100%; 
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%; 
+    object-fit: contain; 
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes slide {
+    0%, 20% { transform: translateX(0); }
+    24%, 44% { transform: translateX(-100%); }
+    48%, 68% { transform: translateX(-200%); }
+    72%, 92% { transform: translateX(-300%); }
+    96%, 100% { transform: translateX(-400%); }
+}
+
+.nav-menu {
+    background-color: #686868;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    position: fixed; 
+    width: 100%; 
+    z-index: 1000; 
+    top: 70px;
+}
+
+.nav-menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-menu a {
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.nav-menu a:hover, .dropdown:hover > a {
+    background-color: #505050;
+}
+
+.dropdown-menu {
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.product-section {
+    padding: 20px;
+}
+
+.product-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product img {
+    width: 100%;
+    height: 80px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.add-to-cart.clicked {
+    background-color: rgb(250, 234, 230);
+    border: 2px solid rgb(0, 255, 76);
+}
+
+footer {
+    background-color: #4f4f4f;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
